@@ -12,9 +12,6 @@ class Appointment(Base):
     date_start = Column(DateTime, nullable=False)
     date_end = Column(DateTime, nullable=False)
     status = Column(String, default="pending")  # pending, confirmed, cancelled
-
-    from datetime import datetime, timezone
-
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
     user_id = Column(Integer, ForeignKey("users.id"))

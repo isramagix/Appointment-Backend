@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from contextlib import asynccontextmanager
 from database import Base, engine
 from routers import user
+from models import User, Appointment
 
 # 👇 Esta función se ejecuta al iniciar y cerrar la app
 @asynccontextmanager

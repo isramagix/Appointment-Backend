@@ -12,5 +12,4 @@ class User(Base):
     full_name = Column(String)
     role = Column(String, default="user")  # "user" o "admin"
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
-
-    # appointments = relationship("Appointment", back_populates="user")
+    appointments = relationship("Appointment", back_populates="user")
