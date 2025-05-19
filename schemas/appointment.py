@@ -18,3 +18,4 @@ class AppointmentOut(AppointmentBase):
 
     class Config:
         orm_mode = True
+ 
